@@ -1,0 +1,18 @@
+.boxes {
+    display: flex;
+}
+
+.row div {
+    height: 250px;
+    font-size: 18px;
+    text-align: center;
+}
+
+h3 {
+    border: 1px solid #000;
+}
+
+img {
+    margin: 20px;
+    border: 1px solid #000;
+}
