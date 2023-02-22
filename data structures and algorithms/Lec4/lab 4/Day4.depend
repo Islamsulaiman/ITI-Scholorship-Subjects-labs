@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1669991769 source:d:\iti subjects\data structures and algorithms\lec4\lab\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Tree.h"
+
+1669991622 d:\iti subjects\data structures and algorithms\lec4\lab\include\tree.h
+

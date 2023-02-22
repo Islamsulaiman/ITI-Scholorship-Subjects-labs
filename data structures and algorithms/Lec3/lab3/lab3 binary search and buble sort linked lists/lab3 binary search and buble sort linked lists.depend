@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1669451831 source:d:\iti subjects\data structures and algorithms\lec3\lab3\lab3 binary search and buble sort linked lists\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+	"linked_list_version.h"
+
+1672249658 d:\iti subjects\data structures and algorithms\lec3\lab3\lab3 binary search and buble sort linked lists\header.h
+
+1672249359 d:\iti subjects\data structures and algorithms\lec3\lab3\lab3 binary search and buble sort linked lists\linked_list_version.h
+

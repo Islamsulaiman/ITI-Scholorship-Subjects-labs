@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1668778030 source:d:\iti subjects\data structures and algorithms\lec2\lab 2\day 2\main.c
+	<stdio.h>
+	<stdlib.h>
+
