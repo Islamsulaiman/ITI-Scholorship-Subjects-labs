@@ -1,0 +1,46 @@
+
+
+.container{
+    width: 600px;
+    height: 400px;
+    background-color: rgb(255, 255, 242);
+    border-radius: 10px;
+    border-bottom: 10px;
+}
+
+.control{
+    height: 80px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+.button{
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+
+}
+
+.button button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+    
+}
+
+.songs div{
+    height: 50px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        border: solid 2px;
+        margin: auto;
+        text-align: center;
+        cursor: pointer;
+}

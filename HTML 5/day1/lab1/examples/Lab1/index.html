@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>HTML5</title>
+</head>
+
+<body>
+    <header>Day1</header>
+    <nav>
+        <a href="#">Google</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instgram</a>
+        <a href="#">Yahoo</a>
+    </nav>
+
+    <section>
+        <details>
+            <summary>Show image</summary>
+            <figure>
+                <div>
+                    <img class="image" src="./imgs/image.png" />
+                </div>
+
+                <figcaption>Image One</figcaption>
+            </figure>
+        </details>
+        <p>Lorem ipsum dolor sit amet consectetur, <mark>adipisicing elit</mark>. In, ipsam at numquam eaque, adipisci
+            delectus reprehenderit laboriosam atque quam exercitationem architecto, eveniet ex impedit dicta. Vitae
+            illum possimus quae natus.</p>
+    </section>
+    <div>
+        <form action="" oninput="out.value=rang.value">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="fname">Passowrd</label>
+            <input type="password" id="email" minlength="8" name="email" placeholder="Your name.."  required>
+
+            <label for="fname">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your name..">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="rang">Salary</label>
+            <input type="range" id="rang" name="rang"  min="3000" max="5000"placeholder="Your last name..">
+            <output name="out"></output>
+            
+            <label for="age">Age</label>
+            <input type="number" id="lname" name="age" placeholder="Your last name.." min="21" max="100">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- <audio controls autoplay>
+        <source src="./sounds/efeect.mp3" type="audio/ogg">
+      </audio> -->
+
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>

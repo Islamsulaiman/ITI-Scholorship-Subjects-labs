@@ -1,0 +1,180 @@
+// //1) call important elements
+
+// let control = document.getElementById("control");
+// let drawFreeHand = document.getElementById("freeHand");
+// let drawLine = document.getElementById("line");
+// let drawRect = document.getElementById("rect");
+// let drawCircle = document.getElementById("circle");
+// let erase = document.getElementById("erase");
+
+// //2) work on canvas
+// let canvas = document.getElementById("canvas");
+// let ctx = canvas.getContext("2d");
+
+// //3) event listener
+
+// // var rect, circle, straightLine, freeHand, clearDraw;
+// control.addEventListener("click", controlBlock);
+
+// function controlBlock(e) {
+//   console.log(e.target.id);
+
+//   if (e.target.id === drawLine.id) {
+//     // console.log("");
+
+//     canvas.addEventListener("mousedown", down);
+
+//     drawLine.addEventListener("click", line);
+//     //removeAll();
+//     //remove();
+
+//     // control.removeEventListener("click", controlBlock);
+//     //line();
+//   } else if (e.target.id === drawFreeHand.id) {
+//     // drawFreeHand.addEventListener("click", freeHandDraw);
+//     freeHandDraw();
+//   } else if (e.target.id === drawRect.id) {
+//     drawLine.removeEventListener("click", line);
+//     drawRect.addEventListener("click", drawRectFunc);
+//     //removeAll();
+//     //remove();
+//     //drawRectFunc();
+//   } else if (e.target.id === drawCircle.id) {
+//     // drawCircle.addEventListener("click", drawCircleFunc);
+//     drawCircleFunc();
+//   } else if (e.target.id === erase.id) {
+//     // erase.addEventListener("click", eraseBrush);
+//     eraseBrush();
+//   }
+// }
+
+// // //////////////////////////one line///////////////////////////////////////
+
+// function line() {
+//   canvas.addEventListener("mousedown", down);
+//   function down(e) {
+//     let point = { x: 0, y: 0 };
+//     point.x = e.offsetX;
+//     point.y = e.offsetY;
+
+//     ctx.beginPath();
+//     ctx.moveTo(point.x, point.y);
+//     console.log("line down");
+//   }
+//   canvas.addEventListener("mouseup", up);
+//   function up(e) {
+//     ctx.lineTo(e.offsetX, e.offsetY);
+//     ctx.stroke();
+//     ctx.closePath();
+//     console.log("line up");
+//   }
+// }
+
+// // ////////////////////////////////free draw//////////////////////////////
+
+// function freeHandDraw() {
+//   console.log("freeHandDraw");
+//   let drawFlag = false;
+//   canvas.addEventListener("mousedown", startDraw);
+//   canvas.addEventListener("mousemove", continueDraw);
+//   canvas.addEventListener("mouseup", stopDraw);
+//   function startDraw(e) {
+//     drawFlag = true;
+//     ctx.beginPath();
+//     ctx.moveTo(e.offsetX, e.offsetY);
+//   }
+//   function continueDraw(e) {
+//     if (drawFlag) {
+//       ctx.lineTo(e.offsetX, e.offsetY);
+//       ctx.stroke();
+//     }
+//   }
+//   function stopDraw() {
+//     drawFlag = false;
+//   }
+// }
+
+// // ///////////////////////////////////////////////gradient/////////////////////////
+
+// function drawRectFunc() {
+//   console.log("rect");
+
+//   let points = { x: 0, y: 0 };
+
+//   canvas.addEventListener("mousedown", function (e) {
+//     points.x = e.offsetX;
+//     points.y = e.offsetY;
+//   });
+
+//   canvas.addEventListener("mouseup", function (e) {
+//     ctx.beginPath();
+
+//     let width = -(points.x - e.offsetX);
+//     let height = -(points.y - e.offsetY);
+
+//     console.log(points.x, points.y, e.offsetX, e.offsetY);
+//     ctx.rect(points.x, points.y, width, height);
+//     ctx.stroke();
+//     ctx.closePath();
+//   });
+// }
+
+// function drawCircleFunc() {
+//   let point1 = { x: 0, y: 0 };
+//   let point2 = { x: 0, y: 0 };
+//   console.log("circle");
+
+//   canvas.addEventListener("mousedown", function (e) {
+//     point1.x = e.offsetX;
+//     point1.y = e.offsetY;
+//   });
+
+//   canvas.addEventListener("mouseup", function (e) {
+//     point2.x = e.offsetX;
+//     point2.y = e.offsetY;
+
+//     let a = Math.abs(point1.x - point2.x);
+//     let b = Math.abs(point1.y - point2.y);
+
+//     let radius = Math.sqrt(a * a + b * b);
+
+//     ctx.beginPath();
+//     ctx.arc(point1.x, point2.y, radius, 0, Math.PI * 2);
+//     ctx.stroke();
+//   });
+// }
+
+// //////////////////////////////erase//////////////////////////////
+
+// function eraseBrush() {
+//   console.log("erase");
+//   let drawFlag = false;
+//   canvas.addEventListener("mousedown", startDelete);
+//   canvas.addEventListener("mousemove", continueDelete);
+//   canvas.addEventListener("mouseup", stopDelete);
+//   function startDelete(e) {
+//     drawFlag = true;
+//     // ctx.moveTo(e.offsetX, e.offsetY);
+//   }
+//   function continueDelete(e) {
+//     if (drawFlag) {
+//       ctx.clearRect(e.offsetX, e.offsetY, 20, 20);
+//       // ctx.stroke();
+//     }
+//   }
+//   function stopDelete(e) {
+//     drawFlag = false;
+//   }
+// }
+
+// function removeAll() {
+//   let newControl = control.cloneNode(true);
+//   control.parentNode.replaceChild(newControl, control);
+// }
+
+// function remove() {
+//   canvas.removeEventListener("mouseup", up);
+//   canvas.removeEventListener("mousedown", down);
+// }
+
+// ///////////////////////////////////////////////////////////////////

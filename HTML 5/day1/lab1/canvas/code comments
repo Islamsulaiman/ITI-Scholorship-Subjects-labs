@@ -1,0 +1,30 @@
+// ctx.fillStyle = "red";
+// ctx.fillRect(50, 50, 20, 40);
+
+// ctx.beginPath();
+// ctx.moveTo(100, 100);
+// ctx.lineTo(200, 200);
+// ctx.stroke();
+
+// ctx.beginPath();
+// ctx.strokeStyle = "green";
+// ctx.arc(100, 50, 10, 90, Math.PI * 2);
+// ctx.stroke();
+
+// ctx.beginPath();
+// ctx.strokeStyle = "blue";
+// ctx.lineWeight = "4";
+// ctx.rect(10, 10, 70, 75);
+// ctx.stroke();
+
+// ctx.fillRect(10, 10, 70, 75);
+
+// ctx.beginPath();
+// ctx.strokeStyle = "yellow";
+// ctx.rect(20, 20, 40, 45);
+// ctx.stroke();
+
+// ctx.beginPath();
+// ctx.moveTo(0, 0);
+// ctx.lineTo(10, 10);
+// ctx.stroke();

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="side-bar" id="side-bar">
+            <div>
+                <label for="fill">Fill</label>
+                <input type="color" id="fill" value="#0000ff">
+                <button id="fill-switch" style="background-color: rgb(248, 183, 248); cursor: pointer;">Fill Off</button>
+            </div>
+            <div>
+                <label for="stroke">Stroke</label>
+                <input type="color" id="stroke" value="#0000ff">
+                <button id="stroke-switch" style="background-color: rgb(248, 183, 248); cursor: pointer;">Stroke Off</button>
+            </div>
+
+
+        </div>
+        <div class="control" id="control">
+            <button id="freeHand">
+                Free hand
+            </button>
+            <button id="line">
+                Line
+            </button>
+            <button id="rect">
+                Rectangle
+            </button>
+            <button id="circle">
+                Circle
+            </button>
+            <button id="erase">
+                Erase
+            </button>
+
+        </div>
+        <div class="canvsClass" id="canvasId" >
+            <canvas id="canvas" height="500px" width="500px" style="border: 3px solid #000000;">
+            
+            </canvas>
+        </div>
+
+    </div>
+
+</body>
+</html>

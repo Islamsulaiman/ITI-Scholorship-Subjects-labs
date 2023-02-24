@@ -1,0 +1,44 @@
+1) draw shapes
+
+    1.1)give the shape color	//optional
+        ctx.fillStyle = "color";
+
+    1.2)draw the shape
+        A) ctx.fillRect(p1X,p1Y,p2X,p2Y)	//draw rect black
+
+2) draw line:
+
+    ctx.beginPath()             //to start new line     to start any new line we should place this method first
+    ctx.lineWidth = "number"    // line weight
+    ctx.strokeStyle = "color"   // to give line color  "optional"
+    ctx.moveTo(x,y)             // line starting point
+    ctx.lineTo(x,y)             // first ending point of the line
+    ctx.lineTo(x,y)             // second ending point "optional" to draw second attaching line
+    ctx.stroke()                // to actually draw the line
+
+3) draw circle
+
+    ctx.strokeStyle = "color"   // to give line color  "optional"
+    ctx.arc(centerX, centerY, radice, starting angle, area)     //ctx.arc(100, 100, 70, 0, Math.PI * 2)     ,starting angle detirmine how much of the circle will be drawn, 0 will draw the full circle
+    ctx.stroke()                // to actually draw the line\
+
+4) draw Rectangle
+
+    ctx.beginPath()             //to start new line     to start any new line we should place this method first
+    ctx.lineWidth = "number"    // line weight
+    ctx.strokeStyle = "color"   // to give line color  "optional"
+    ctx.rect(upperLeftPoint-X,upperLeftPoint-Y,width,height)
+    ctx.stroke()                // to actually draw the line
+
+5) draw text and fill it 
+
+ctx.font = "like css"
+ctx.strokeStyle = "color"                   // to give line color  "optional"
+ctx.strokeText("text", startX, startY)      // this will write
+
+ctx.fillStyle = "color";
+ctx.fillText("text", startX, startY)        //
+
+ctx.fillText("text", canvas.width/2, canvas.height/2)   //to start text from the center
+
+
