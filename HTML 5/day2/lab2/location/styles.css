@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(136, 80, 13);
+}
+
+#mapContainer {
+    width: 550px;
+    height: 350px;
+    border: 2px solid rgb(94, 255, 115);
+    margin: 100px auto;
+    border-radius: 20px;
+    background-color: beige;
+}
+input {
+    width: 100px;
+    height: 40px;
+    font-size:medium;
+    margin-top: 20px;
+    margin-left: 45%;
+}
+
+#location {
+    border-radius: 10px;
+}
