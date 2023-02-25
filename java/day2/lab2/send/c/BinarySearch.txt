@@ -1,0 +1,24 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class BinarySearch {
+
+    int binarySearch(int arr[] , int right , int left , int value){
+
+        if (left>=right){
+            int mid = right + (left - right)/2;
+            if (arr[mid] == value){
+                return mid;
+            }
+            if (arr[mid] > value){
+                return binarySearch(arr, right, mid-1, value);//search in left subarray
+            }else{
+                return binarySearch(arr, mid+1, left, value);//search in right subarray
+            }
+        }
+        return -1;
+    }
+
+
+
+}

@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int [] array = new int[1000];
+        for (int i = 0; i < array.length; i++) {
+            array [i] = (int) (Math.random () * 100);
+        }
+        long startTime = System.nanoTime();
+        ArrayAlgorithms algo = new ArrayAlgorithms();
+        int maxNumber = algo.max(array);
+        int minNumber = algo.min(array);
+        System.out.println(maxNumber);
+        System.out.println(minNumber);
+        long endTime = System.nanoTime();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
+
+        BinarySearch algo1 = new BinarySearch();
+        int n = array.length;
+        Scanner scanner = new Scanner(System.in);
+        int value = scanner.nextInt();
+        long startTime1 = System.nanoTime();
+        Arrays.sort(array);
+        int algo2 = algo1.binarySearch(array,0,n-1,value);
+        long endTime1 = System.nanoTime();
+        long totalTime1 = endTime1 - startTime1;
+        System.out.println(algo2);
+        System.out.println(totalTime1);
+
+
+
+    }
+}

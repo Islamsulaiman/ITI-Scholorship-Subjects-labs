@@ -1,0 +1,15 @@
+public class Ex2 {
+
+	public static void main(String [] args){
+
+	if(args.length == 1 && args[0].equals("iti")){
+
+		System.out.print("true value ");
+		System.out.print(args[0]);
+
+	}else{
+		System.out.print("Please enter iti as an arg");
+	}
+
+	}
+}
