@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="LibraryManual"/>
+        <xs:element name="book">
+            
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="author"/>
+              <xs:element type="xs:string" name="preface"/>
+              <xs:element name="part" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                    
+                  <xs:sequence>
+                    <xs:element name="chapter">
+                      <xs:complexType>
+                          
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="summary"/>
+                          <xs:element name="content">
+                              
+                            <xs:complexType>       
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="p"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                            
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="chap_title" use="optional"/>
+                      </xs:complexType>
+                      
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="part_title" use="optional"/>
+                </xs:complexType>
+                
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="isbn"/>
+            <xs:attribute type="xs:string" name="book_title"/>
+          </xs:complexType>
+          
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="location"/>
+      <xs:attribute type="xs:string" name="description"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

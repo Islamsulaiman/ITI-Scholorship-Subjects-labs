@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<BookStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="main.xsd">
+    <book Category="fiction" InStock="True">
+        <Title>Book 4</Title>
+        <Author>Islam </Author>
+    </book>
+    
+    <book Category="sience" InStock="False">
+        <Title>Book5</Title>
+        <Author>Islam</Author>
+    </book>
+</BookStore>

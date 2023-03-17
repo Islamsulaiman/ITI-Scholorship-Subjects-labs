@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="main.xsd"
+    location="Al4arqya abookbeer" description="it's a lib">
+
+    <LibraryManual>ITI</LibraryManual>
+    <book isbn="1" book_title="eatLovePray">
+        <author>Islam sulaiman</author>
+        <preface>Hello</preface>
+
+
+        <part part_title="part">
+            
+            <chapter chap_title="chapter">
+                <summary>Looma</summary>
+                <content>
+                    <p>From hell</p>
+                </content>
+            </chapter>
+            
+        </part>
+        
+        
+       
+        
+        <part part_title="part">
+            <chapter chap_title="chapter">
+                <summary>chap1 about iti</summary>
+                <content>
+                    <p>Some text here about the book</p>
+                </content>
+            </chapter>
+        </part>
+    </book>
+    
+
+</library>

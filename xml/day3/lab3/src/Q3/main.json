@@ -1,0 +1,15 @@
+{
+  "LibraryName": "footballers",
+  "Author": "Islam el raye2",
+  "Appendex": "frequant questions",
+  "parts": [
+    {
+      "summary": "Section1",
+      "content": "Text to summerize sec1"
+    },
+    {
+      "summary": "Section2",
+      "content": "Text to summerize sec2"
+    }
+  ]
+}

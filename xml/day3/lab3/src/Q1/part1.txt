@@ -1,0 +1,12 @@
+./catalog/cd/title[price>10]
+
+./catalog/cd[year<1990]
+
+./catalog/cd[coutry="uk"][price and title] 
+
+./catalog/cd/artist="Dolly Parton"::preceding/artist
+
+./catalog/cd/artist="Dolly Parton"::following/title
+
+
+

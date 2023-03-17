@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<BookStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="main.xsd">
+    <book>
+
+        <Title>Book2</Title>
+        <Author>Author2</Author>
+        <Date>1-4-1998</Date>
+        <ISBN>2</ISBN>
+        <Publisher>Ahmed Mohamed</Publisher>
+    </book>
+
+    <book>
+
+        <Title>Book3</Title>
+        <Author>Author 3</Author>
+        <Date>23-1-2012</Date>
+        <ISBN>3</ISBN>
+        <Publisher>Publisher 3</Publisher>
+        
+    </book>
+</BookStore>

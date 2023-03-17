@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<!DOCTYPE Library SYSTEM "Library.DTD">
+
+<Library>
+    <Information>
+        <Location>&address1;</Location>
+        
+	<Description>This is one of the most complete libraries  in the world</Description>
+        
+    </Information>
+    
+    <Books>
+        
+        <!--Book Sample-->
+        <Book ISBN="Book1">
+            
+            <Headings titleOf="Book1">Niver Split the differance</Headings>
+            
+            <Writer gender="M">Phill heath</Writer>
+            
+
+            <!--First Part -->
+            <Part num="1">
+                <Ptitle>Start by reaching common </Ptitle>
+
+                <!--First Chapter -->
+                <Chapter pageS="1">
+                    <Ctitle>Te</Ctitle>
+                    <Summary>Te</Summary>
+
+                    <!--First Section -->
+                    <Section snum="10">
+                        <Content>
+                            <![CDATA[Within this Character Data block I can
+                            use double dashes as much as I want (along with <, &, ', and ")
+                            *and* %MyParamEntity; will be expanded to the text
+                            "Has been expanded"]]>
+                        </Content>
+                    </Section>
+                    
+                </Chapter>	
+                	
+            </Part>
+        </Book>
+        	
+    </Books>
+
+</Library>
+

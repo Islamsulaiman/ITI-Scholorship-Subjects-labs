@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/emptyDTD.dtd to edit this template
+-->
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+
+<!-- External Entities-->
+<!ELEMENT Library (Information?, Books?)>
+<!ELEMENT Information (Location?, Description?)>
+<!ELEMENT Location (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Books (Book+)>
+
+<!ELEMENT Book (Headings?, Writer?, Part+)>
+<!ELEMENT Headings (#PCDATA)>
+<!ELEMENT Writer (#PCDATA)>
+<!ATTLIST Book ISBN ID #REQUIRED>
+<!ATTLIST Headings titleOf IDREF #REQUIRED>
+<!ATTLIST Author gender ( M | F ) "M">
+
+<!ELEMENT Part (Ptitle?, Chapter+)>
+<!ELEMENT Ptitle (#PCDATA)>
+<!ATTLIST Part num CDATA #REQUIRED>
+
+<!ELEMENT Chapter (Ctitle?, Summary?, Section+)>
+<!ELEMENT Ctitle (#PCDATA)>
+<!ELEMENT Summary (#PCDATA)>
+<!ATTLIST Chapter pageS CDATA #REQUIRED>
+
+<!ELEMENT Section (Content?)>
+<!ATTLIST Section snum CDATA #REQUIRED>
+
+<!ELEMENT Content (#PCDATA)>
+
+<!ENTITY address1 "ITI smart village">
