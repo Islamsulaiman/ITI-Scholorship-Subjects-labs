@@ -1,0 +1,7 @@
+//DB schema
+create table contact(id int unsigned not null auto_increment, name varchar(20), nick_name varchar(20), address varchar(128), home_phone varchar(10), work_phone varchar(10), cell_phone varchar(10), email varchar(100), birthday date, web_site varchar(100), profession varchar(100), primary key (id));
+
+//Insert some data to the DB
+
+INSERT INTO contact (name , nick_name , address, home_phone, work_phone, cell_phone, email , web_site , profession) VALUES ("name1" , "nick_name1" , "address1" , "home_phone1", "work_phone1", "cell_phone1", "email_1" ,  "web_site1", "profession1"); 
+INSERT INTO contact (name , nick_name , address, home_phone, work_phone, cell_phone, email , web_site , profession) VALUES ("name2" , "nick_name2" , "address2" , "home_phone2", "work_phone2", "cell_phone2", "email_2" ,  "web_site2", "profession2"); 
