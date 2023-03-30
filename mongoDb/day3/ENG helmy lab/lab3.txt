@@ -1,0 +1,15 @@
+Import the attached data into a new database and collection
+
+find all documents with age greater than 20 with index (create index on age) on age and another one with drop index and run explain with executionStats on both and see executionTimeMillis and discuss what you see
+
+create index on age with partial filter expression on male gender
+
+find all query with age greater than 60 only and another query with age greater than 60 and gender male and explain to see what happen in both two queries
+
+discuss the differnce between partial filter expression and compound indexes
+
+create a new collection and start to insert any data in two fields email and name
+
+after insert data make an index on email and it should be unique and only email added to index if email exist
+
+try to use text indexes to exclude words 

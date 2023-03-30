@@ -1,0 +1,8 @@
+- Executing deleteOne and deleteMany operations.
+- Creating indexes (single field, compound, multi-key and text indexes).
+- Using cursor.explain with different queries and reading and understanding the winningPlan.
+- Running aggregation queries that use ($match, $count, $limit, $skip and $sort).
+
+References:
+https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/ 
+https://www.mongodb.com/docs/manual/indexes/

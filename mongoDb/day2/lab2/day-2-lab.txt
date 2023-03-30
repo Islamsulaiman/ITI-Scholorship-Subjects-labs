@@ -1,0 +1,10 @@
+- Using cursor methods (skip, limit, sort).
+- Executing update queries with ($set, $unset, $push, $pop, $pull, etc).
+- Using $push with modifiers.
+- Using $, $[] and $[<identifier>].
+- Using update with { upsert: true }.
+
+References:
+- https://www.mongodb.com/docs/manual/reference/operator/update/
+- https://www.mongodb.com/docs/manual/reference/method/js-cursor/
+
