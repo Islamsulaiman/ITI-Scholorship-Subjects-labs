@@ -1,0 +1,24 @@
+body{
+    background-color:rgb(4, 59, 59);
+}
+
+.card {
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+.more{
+    color: brown;
+}  
+.less{
+    color: chocolate;
+}
+
+.more,.less{
+    font-weight: bold;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="./vueversion3.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="mainContainer" class="container">
+        <!-- Nav Bar -->
+        <div class="d-flex justify-content-between align-items-baseline p-2 my-2 bg-dark text-light">
+            <a class="btn btn-primary " href="#" style="text-decoration: none; color:aliceblue" @click.prevent="iscartvisible=false">Book List</a>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <p class="mx-2">[{{cart.items.length}}] <template v-if="cart.items.length==1">Book</template><template v-else>Books</template> -- Total price [{{formateCurrency(getTotalPrice())}}]</p>
+                <button class="btn btn-primary" @click="iscartvisible=true">ShowCart</button>
+            </div>
+        </div>
+
+        <!-- End Of Nav Bar -->
+
+        <!-- Books Product -->
+        <div class="row m-auto text-center" v-if="iscartvisible==false">
+            <div class="card border m-auto" style="width:20rem" v-for="book in Books">
+                <img class="w-100" :src="book.image" :alt="book.name">
+                <div style="display: flex; justify-content: space-between;">
+                    <h6 class="my-2 text-left">Autor: {{book.Author}}</h6>
+                    <h6 class="my-2 text-right">Category: {{book.category}}</h6>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <h6 class="my-2 text-left":class="[book.numberOfPages >50?'more':'',book.numberOfPages <50?'less':'']">Number of Pages: {{book.numberOfPages}}</h6>
+                    <h6 class="my-2 text-right">Price: {{book.price}}</h6>
+                </div>
+                <button class="btn btn-primary" :disabled="book.isBookInCart" @click="addToCart(book)">Add To List</button>
+            </div>
+        </div>
+        
+        <!-- end of books product -->
+
+        <!-- Books cart  -->
+        <div class="row text-center" v-if="iscartvisible==true">
+            <h4 class="text-center text-danger" v-if="cart.items.length==0">
+                Note There is No Book in Your Cart
+            </h4>
+            <table class="table table-striped table-bordered text-center" v-else>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <!-- <th>Image</th> -->
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <!-- <th>Total Price</th> -->
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in cart.items">
+                        <td>{{item.book.id}}</td>
+                        <td>{{item.book.name}}</td>
+                        <!-- <td>{{item.book.image}}</td> -->
+                        <td>{{item.book.Author}}</td>
+                        <td>{{item.book.numberOfPages}}</td>
+                        <td>{{item.book.category}}</td>
+                        <td>{{formateCurrency(item.book.price)}}</td>
+                        <!-- <td>toto</td> -->
+                        <td><button class="btn btn-danger" @click="removeFromCart(item)">&nbsp;-&nbsp;</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end of Books Cart -->
+
+
+
+    </div>
+    <script src="./books.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data:()=>({
+                iscartvisible:false,
+                Books:Books.map(book=>({...book,isBookInCart:false})),
+                cart:{
+                    items:[],
+                }
+            }),
+            methods:{
+                addToCart(book){
+                    this.cart.items.push({book:book,});
+                    book.isBookInCart = true;
+                },
+                
+                removeFromCart(item) {
+                    const index = this.cart.items.indexOf(item);
+                    if (index > -1) {
+                      this.cart.items.splice(index, 1);
+                      item.book.isBookInCart = false; // set the flag to false when removing the item
+                    }
+                },
+                getTotalPrice(){
+                    let result = 0;
+                    for(let i=0;i<this.cart.items.length;i++){
+                        result+=this.cart.items[i].book.price;
+                    }
+                    return result;
+                },
+                formateCurrency(value){
+                    return Intl.NumberFormat('ar-EG',{
+                        style:'currency',
+                        minimumFractionDigits:0,
+                        currency:'EGP'
+                    }).format(value)
+                }
+
+            }
+        });
+
+        app.mount("#mainContainer")
+
+    </script>
+</body>
+</html>
