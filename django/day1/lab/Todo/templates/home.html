@@ -1,0 +1,11 @@
+{% extends 'base.html' %}  
+{% load static %}
+
+{% block content %}
+        {% if todos %}
+            {{ todos }}
+        {% else %}
+        <h2>Sorry no todos to show</h2>
+        {% endif %}  
+
+{% endblock content %}
