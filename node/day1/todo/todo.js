@@ -55,6 +55,3 @@ if(cmd === "add"){
     
 
 }
-
-// console.log(todo);
-

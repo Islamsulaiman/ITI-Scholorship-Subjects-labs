@@ -21,8 +21,6 @@ function deleteSingle(todo, taskId){
         fs.writeFileSync("./data.json", JSON.stringify(todo))
     }
 
-
-
 }
 
 

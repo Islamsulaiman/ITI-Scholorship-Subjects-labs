@@ -16,8 +16,6 @@ function listFilter(todo, option){
             console.log(task)
         }
 
-
-
     });
 }
 
